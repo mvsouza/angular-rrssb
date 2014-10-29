@@ -5,16 +5,15 @@ describe('angular-rrssb', function () {
 
   function createDirective(template) {
     var elm;
-
     elm = angular.element(template);
     angular.element(document.body).prepend(elm);
-    $compile(elm)(scope);
+    $compile(elm)($rootScope);
     scope.$digest();
 
     return elm;
   }
 
-  beforeEach(module('ngSanitize', 'mvsouza.angular-rrssb'));
+  beforeEach(module('mvsouza.angular-rrssb'));
   beforeEach(inject(function(_$rootScope_, _$compile_) {
     $rootScope = _$rootScope_;
     scope = $rootScope.$new();
@@ -25,16 +24,16 @@ describe('angular-rrssb', function () {
     if (element) element.remove();
   });
 
-  describe('as an element', function(){ runTestsWithTemplate('<angular-rrssb></angular-rrssb>'); });
-  describe('as an attribute', function(){ runTestsWithTemplate('<div angular-rrssb></div>'); });
+  describe('as an element', function(){ runTestsWithTemplate('<rrssb></rrssb>'); });
+  describe('as an attribute', function(){ runTestsWithTemplate('<div rrssb></div>'); });
 
   function runTestsWithTemplate(template) {
     describe('when created', function () {
 
-      it('should initial the value to 0', function () {
+      it('should initialise', function () {
         element = createDirective(template);
 
-        expect(element.text()).toContain('0');
+        expect(element.text()).toContain('class="rrssb"');
       });
     });
   }

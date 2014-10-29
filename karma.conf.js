@@ -15,7 +15,6 @@ module.exports = function(config) {
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/RRSSB/js/rrssb.js',
       'dist/angular-rrssb.js',
-      'dist/angular-rrssb.css',
       'test/**/*.spec.js'
     ],
 

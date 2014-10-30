@@ -1,10 +1,10 @@
 {
-  "name": "angular-directive-boilerplate",
+  "name": "angular-rrssb",
   "version": "0.0.8",
-  "description": "Angular Publishable Directive Boilerplate",
+  "description": "Angular ",
   "repository": {
     "type": "git",
-    "url": "git@github.com:mohsen1/angular-directive-boilerplate.git"
+    "url": "git@github.com:mvsouza/angular-rrssb.git"
   },
   "main": "dist/angular-rrssb.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "directive"
   ],
   "author": {
-    "name": "Mohsen Azimi"
+    "name": "Matheus Valiente Souza"
   },
   "license": "MIT",
   "devDependencies": {
@@ -46,27 +46,27 @@
     "mversion": "^1.6.0"
   },
   "bugs": {
-    "url": "https://github.com/mohsen1/angular-directive-boilerplate/issues"
+    "url": "https://github.com/mvsouza/angular-rrssb/issues"
   },
-  "homepage": "https://github.com/mohsen1/angular-directive-boilerplate",
-  "_id": "angular-directive-boilerplate@0.0.8",
+  "homepage": "https://github.com/mvsouza/angular-rrssb",
+  "_id": "angular-rrssb@0.0.8",
   "_shasum": "c1403812398582dfced6552889e07889e5ccec16",
-  "_from": "angular-directive-boilerplate@0.0.*",
+  "_from": "angular-rrssb@0.0.*",
   "_npmVersion": "1.4.9",
   "_npmUser": {
     "name": "mohsen",
-    "email": "msnazi@gmail.com"
+    "email": "matheusvalientesouza@hotmail.com"
   },
   "maintainers": [
     {
-      "name": "mohsen",
-      "email": "msnazi@gmail.com"
+      "name": "mvsouza",
+      "email": "matheusvalientesouza@hotmail.com"
     }
   ],
   "dist": {
     "shasum": "c1403812398582dfced6552889e07889e5ccec16",
-    "tarball": "http://registry.npmjs.org/angular-directive-boilerplate/-/angular-directive-boilerplate-0.0.8.tgz"
+    "tarball": "http://registry.npmjs.org/angular-rrssb/-/angular-rrssb-0.0.8.tgz"
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/angular-directive-boilerplate/-/angular-directive-boilerplate-0.0.8.tgz"
+  "_resolved": "https://registry.npmjs.org/angular-rrssb/-/angular-rrssb-0.0.8.tgz"
 }

@@ -2,55 +2,52 @@
 
 describe('angular-rrssb', function () {
   var scope, $compile, $rootScope, element;
-
   function createDirective(template) {
     var elm;
+
     elm = angular.element(template);
     angular.element(document.body).prepend(elm);
-    var a = $compile(elm);
-    a(scope);
+    $compile(elm)(scope);
     scope.$digest();
 
     return elm;
   }
 
-  beforeEach(module('mvsouza.angular-rrssb'));
+  beforeEach(module('ngSanitize', 'mvsouza.angular-rrssb'));
   beforeEach(inject(function(_$rootScope_, _$compile_) {
     $rootScope = _$rootScope_;
     scope = $rootScope.$new();
     $compile = _$compile_;
   }));
 
-  afterEach(function () {
-    if (element) element.remove();
-  });
+  function ietherWays(describeF, config){
+    describe('as an element', function(){ describeF("<rrssb "+config+"></rrssb>"); });
+    describe('as an attribute', function(){ describeF("<div rrssb "+config+"></div>"); });
+  }
 
-  describe('as an element', function(){ runTestsWithTemplate('<rrssb></rrssb>'); });
-  describe('as an attribute', function(){ runTestsWithTemplate('<div rrssb></div>'); });
-
+  ietherWays(runTestsWithTemplate,"")
   function runTestsWithTemplate(template) {
     describe('when created', function () {
 
-      it('should initialise', function () {
+      it('contain root class', function () {
         element = createDirective(template);
 
-        expect(element.text()).toContain('class=');
+        expect(element.html()).toContain('class="rrssb-buttons ');
       });
     });
   }
+  ietherWays(runTestsWithTemplateContainingArrayWithFacebook,"ng-share-midias=\"['facebook']\"")
+  function runTestsWithTemplateContainingArrayWithFacebook(template) {
+    describe('when created', function () {
+      it('contain just facebook link', function () {
+        element = createDirective(template);
 
-});
-describe('sample component test', function() {
-    // a single test
-    it('ensure addition is correct', function() {
-        // sample expectation
-        expect(1+1).toEqual(2);
-        //                  `--- the expected value (2)
-        //             `--- the matcher method (equality)
-        //       `-- the actual value (2)
+        expect(element.html()).toContain('https://www.facebook.com/');
+        expect(element.html()).not.toContain('https://www.linkedin.com/');
+        expect(element.html()).not.toContain('https://twitter.com/');
+        expect(element.html()).not.toContain('https://www.tumbler.com/');
+        expect(element.html()).not.toContain('mailto');
+      });
     });
-    // another test
-    it('ensure substraction is correct', function() {
-        expect(1-1).toEqual(0);
-    });
+  }
 });

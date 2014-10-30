@@ -52,7 +52,7 @@ gulp.task('clean', function(cb) {
   del(['dist'], cb);
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts',['clean'], function() {
 
   function buildTemplates() {
     return gulp.src('src/**/*.html')
@@ -94,7 +94,7 @@ gulp.task('scripts', function() {
 });
 
 
-gulp.task('styles', function() {
+gulp.task('styles',['clean'], function() {
 
   return gulp.src('src/angular-rrssb.less')
     .pipe(less())
@@ -113,18 +113,18 @@ gulp.task('open', function(){
   .pipe(open('', {url: 'http://localhost:8080/demo/demo.html'}));
 });
 
-gulp.task('jshint-test', function(){
+gulp.task('jshint-test',['build'], function(){
   return gulp.src('./test/**/*.js').pipe(jshint());
 })
 
-gulp.task('karma', function (done) {
+gulp.task('karma',['jshint-test'], function (done) {
   karma.start({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
   }, done);
 });
 
-gulp.task('karma-serve', function(done){
+gulp.task('karma-serve',['jshint-test'], function(done){
   karma.start({
     configFile: __dirname + '/karma.conf.js'
   }, done);

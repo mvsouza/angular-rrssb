@@ -20,6 +20,6 @@
     "angular": "~1.2.26",
     "angular-sanitize": "~1.2.26",
     "angular-mocks": "~1.2.26",
-    "RRSSB": "latest"
+    "RRSSB": "1.6.5"
   }
 }

@@ -16,7 +16,7 @@ angular.module('mvsouza.angular-rrssb', []).directive('rrssb', function () {
       };
       $scope.pinterestImg = attr.ngPinterestImg;
       if(attr.ngGithubProject)$scope.githubProject = attr.ngGithubProject;
-      $scope.title = "" || attr.ngShareTitle; 
+      $scope.title = attr.ngShareTitle || ""; 
       $scope.encode = function (text) {
         return encodeURIComponent(text);
       };

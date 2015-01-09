@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('mvsouza.angular-rrssb', []).directive('rrssb', function () {
-  var value = 0;
-
+  var mediasAvailable = ['facebook','pinterest','pocket','github','googleplus','reddit','twitter','linkedin','email'];
   return {
     restrict: 'AE',
     templateUrl: 'angular-rrssb.html',
@@ -20,9 +19,6 @@ angular.module('mvsouza.angular-rrssb', []).directive('rrssb', function () {
       $scope.encode = function (text) {
         return encodeURIComponent(text);
       };
-      //$scope.fbShare = (function () {
-        //window.open('http://www.facebook.com/sharer.php?s=100&p[url]=' + $scope.urlToShare);
-      //});
     }
   };
 });

@@ -5,7 +5,7 @@
     "Matheus Souza<matheusvalientesouza@hotmail.com>"
   ],
   "description": "",
-  "main": "dist/angular-rrssb.js, dist/angular-rrssb.less",
+  "main": ["dist/angular-rrssb.min.js", "dist/angular-rrssb.min.css"],
   "license": "MIT",
   "private": false,
   "ignore": [

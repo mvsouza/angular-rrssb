@@ -5,7 +5,10 @@
     "Matheus Souza<matheusvalientesouza@hotmail.com>"
   ],
   "description": "",
-  "main": ["dist/angular-rrssb.min.js", "dist/angular-rrssb.min.css"],
+  "main": [
+    "dist/angular-rrssb.min.js",
+    "dist/angular-rrssb.min.css"
+  ],
   "license": "MIT",
   "private": false,
   "ignore": [
@@ -21,5 +24,8 @@
     "angular-sanitize": "~1.2.26",
     "angular-mocks": "~1.2.26",
     "RRSSB": "1.6.5"
+  },
+  "dependencies": {
+    "RRSSB": "~1.6.5"
   }
 }

@@ -5,7 +5,7 @@ angular.module('mvsouza.angular-rrssb', []).directive('rrssb', function () {
   return {
     restrict: 'AE',
     templateUrl: 'angular-rrssb.html',
-    replcae: true,
+    replace: true,
     link: function ($scope, element, attr) {
       $scope.urlToShare = attr.ngShareLink;
       $scope.shareMidias = attr.ngShareMidias;

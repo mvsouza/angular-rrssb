@@ -32,7 +32,7 @@ describe('angular-rrssb', function () {
       it('contain root class', function () {
         element = createDirective(template);
 
-        expect(element.html()).toContain('class="rrssb-buttons ');
+        expect(element.hasClass('rrssb-buttons')).toBe(true);
       });
     });
   }

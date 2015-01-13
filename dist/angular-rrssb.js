@@ -1,7 +1,7 @@
 /*!
  * angular-rrssb
  * https://github.com/mvsouza/angular-rrssb
- * Version: 0.0.8 - 2015-01-12T16:01:30.458Z
+ * Version: 0.0.8 - 2015-01-13T11:41:50.144Z
  * License: MIT
  */
 
@@ -13,7 +13,7 @@ angular.module('mvsouza.angular-rrssb', []).directive('rrssb', function () {
   return {
     restrict: 'AE',
     templateUrl: 'angular-rrssb.html',
-    replcae: true,
+    replace: true,
     link: function ($scope, element, attr) {
       $scope.urlToShare = attr.ngShareLink;
       $scope.shareMidias = attr.ngShareMidias;

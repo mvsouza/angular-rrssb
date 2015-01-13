@@ -7,6 +7,7 @@ angular.module('mvsouza.angular-rrssb', []).directive('rrssb', function () {
     templateUrl: 'angular-rrssb.html',
     replcae: true,
     link: function ($scope, element, attr) {
+      $scope.$watch('$viewContentLoaded', rrssbInit);
       $scope.urlToShare = attr.ngShareLink;
       $scope.shareMidias = attr.ngShareMidias;
       $scope.showAll = false || attr.ngShareAll; 
